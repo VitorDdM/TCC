@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Ajuda - Sistema de Vagas</title>
+    <script src="script-theme.js"></script>
+    <link rel="stylesheet" href="style-ajuda.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+          <div class="nome"><a>AJUDA</a></div>
+        <div class="logo">
+            <span>ConectaVagas</span>
+        </div>
+        <div class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </div>
+        <div class="theme-toggle"></div>
+        <div class="nav-links">
+            <a href="ajuda.html">AJUDA</a>
+            <a href="index.html">PÁGINA PRINCIPAL</a>
+            <a href="historico.html">HISTÓRICO</a>
+            <a href="perfil.html">CONTA</a>
+            <a href="sobre.html">SOBRE</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                <svg viewBox="0 0 24 24" fill="#7c5cfc"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+                <span>Central de Ajuda</span>
+            </div>
+            <h1>Como usar o <span>Sistema de Vagas</span></h1>
+            <p>Aprenda passo a passo como aproveitar ao máximo todas as funcionalidades da plataforma. Guias completos, dicas e respostas para suas dúvidas.</p>
+            <div class="hero-divider"></div>
+        </div>
+
+        <div class="quick-search">
+            <svg viewBox="0 0 24 24" fill="#8a8db0"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="text" placeholder="Buscar ajuda... (ex: como me candidatar)">
+        </div>
+    </section>
+
+    <!-- NAVIGATION TABS -->
+    <section class="tabs-section">
+        <div class="tabs-container">
+            <button class="tab-btn active" data-target="recomendacoes">
+                <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span>Recomendações</span>
+            </button>
+            <button class="tab-btn" data-target="historico">
+                <svg viewBox="0 0 24 24" fill="#fff"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
+                <span>Histórico</span>
+            </button>
+            <button class="tab-btn" data-target="avaliacao">
+                <svg viewBox="0 0 24 24" fill="#fff"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                <span>Avaliação CV</span>
+            </button>
+            <button class="tab-btn" data-target="conta">
+                <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <span>Minha Conta</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- TUTORIAL SECTIONS -->
+    <main class="tutorial-content">
+
+        <!-- SEÇÃO: RECOMENDAÇÕES -->
+        <section class="tutorial-section active" id="recomendacoes">
+            <div class="section-header">
+                <h2>Sistema de Recomendações</h2>
+                <p>Descubra vagas personalizadas para o seu perfil</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Acesse a Página Principal</h3>
+                        <p>Ao fazer login, você será direcionado automaticamente para a página de recomendações. Aqui você verá vagas selecionadas especialmente para o seu perfil.</p>
+                        <div class="step-tip">
+                            <svg viewBox="0 0 24 24" fill="#7c5cfc"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>
+                            <span>Dica: Complete seu perfil para receber recomendações mais precisas!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Entenda os Cards de Vagas</h3>
+                        <p>Cada card mostra informações importantes sobre a vaga:</p>
+                        <ul class="info-list">
+                            <li><strong>Título da vaga</strong> - Nome do cargo oferecido</li>
+                            <li><strong>Empresa</strong> - Nome da empresa contratante</li>
+                            <li><strong>Descrição</strong> - Resumo das responsabilidades</li>
+                            <li><strong>MATCH%</strong> - Compatibilidade com seu perfil</li>
+                            <li><strong>Nível de Complexidade</strong> - Barra de dificuldade</li>
+                            <li><strong>Estrelas</strong> - Avaliação da vaga por outros usuários</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Filtre as Vagas</h3>
+                        <p>Use os filtros disponíveis para refinar sua busca:</p>
+                        <div class="filter-examples">
+                            <span class="filter-tag">Por área</span>
+                            <span class="filter-tag">Por localização</span>
+                            <span class="filter-tag">Por salário</span>
+                            <span class="filter-tag">Por tipo de contrato</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Candidate-se</h3>
+                        <p>Encontrou uma vaga interessante? Clique no botão "Candidatar-se" e siga as instruções. Você pode se candidatar a múltiplas vagas simultaneamente.</p>
+                        <div class="step-warning">
+                            <svg viewBox="0 0 24 24" fill="#f5a623"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                            <span>Atenção: Verifique se seu perfil está atualizado antes de se candidatar!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: HISTÓRICO -->
+        <section class="tutorial-section" id="historico">
+            <div class="section-header">
+                <h2>Sistema de Histórico</h2>
+                <p>Acompanhe todas as suas atividades na plataforma</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Acesse o Histórico</h3>
+                        <p>Clique em "HISTÓRICO" na barra de navegação superior. Você verá um dashboard completo com suas estatísticas.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Entenda as Estatísticas</h3>
+                        <p>No topo da página, você encontrará 4 cards com métricas importantes:</p>
+                        <div class="stats-explanation">
+                            <div class="stat-item">
+                                <div class="stat-icon purple">👁️</div>
+                                <div class="stat-desc">
+                                    <strong>Vagas Visualizadas</strong>
+                                    <p>Total de vagas que você abriu</p>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon green">📝</div>
+                                <div class="stat-desc">
+                                    <strong>Candidaturas</strong>
+                                    <p>Vagas para as quais você se candidatou</p>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon yellow">🎤</div>
+                                <div class="stat-desc">
+                                    <strong>Entrevistas</strong>
+                                    <p>Processos seletivos em andamento</p>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon red">💼</div>
+                                <div class="stat-desc">
+                                    <strong>Ofertas Recebidas</strong>
+                                    <p>Propostas de emprego recebidas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Use os Filtros</h3>
+                        <p>Filtre seu histórico por categoria:</p>
+                        <div class="filter-examples">
+                            <span class="filter-tag">Todas</span>
+                            <span class="filter-tag">Candidaturas</span>
+                            <span class="filter-tag">Visualizações</span>
+                            <span class="filter-tag">Entrevistas</span>
+                            <span class="filter-tag">Ofertas</span>
+                        </div>
+                        <p style="margin-top: 15px;">Você também pode usar a barra de busca para encontrar atividades específicas.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Timeline de Atividades</h3>
+                        <p>Suas atividades são exibidas em ordem cronológica com indicadores coloridos:</p>
+                        <div class="timeline-legend">
+                            <div class="legend-item"><span class="dot accepted"></span> Aceito para entrevista</div>
+                            <div class="legend-item"><span class="dot pending"></span> Em análise</div>
+                            <div class="legend-item"><span class="dot viewed"></span> Visualizado</div>
+                            <div class="legend-item"><span class="dot interview"></span> Entrevista agendada</div>
+                            <div class="legend-item"><span class="dot offer"></span> Oferta recebida</div>
+                            <div class="legend-item"><span class="dot rejected"></span> Não selecionado</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Exporte seu Histórico</h3>
+                        <p>No final da página, você pode baixar seu histórico completo em diferentes formatos:</p>
+                        <div class="export-options">
+                            <div class="export-item">
+                                <svg viewBox="0 0 24 24" fill="#ea4335"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                                <span>PDF</span>
+                            </div>
+                            <div class="export-item">
+                                <svg viewBox="0 0 24 24" fill="#00c853"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                                <span>Excel</span>
+                            </div>
+                            <div class="export-item">
+                                <svg viewBox="0 0 24 24" fill="#7c5cfc"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                                <span>CSV</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: AVALIAÇÃO -->
+        <section class="tutorial-section" id="avaliacao">
+            <div class="section-header">
+                <h2>Avaliação Rápida de CV</h2>
+                <p>Para candidatos sem experiência profissional</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number special">⭐</div>
+                    <div class="step-content">
+                        <h3>Para quem é esta funcionalidade?</h3>
+                        <p>A Avaliação Rápida de CV foi desenvolvida especialmente para:</p>
+                        <ul class="info-list">
+                            <li>Jovens em busca do primeiro emprego</li>
+                            <li>Estudantes procurando estágio</li>
+                            <li>Pessoas em transição de carreira</li>
+                            <li>Quem não possui experiência formal</li>
+                        </ul>
+                        <div class="step-tip">
+                            <svg viewBox="0 0 24 24" fill="#00c853"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            <span>Não se preocupe! Nossa IA analisa seu potencial, não apenas sua experiência.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Acesse a Avaliação</h3>
+                        <p>Você pode acessar de duas formas:</p>
+                        <ol class="numbered-list">
+                            <li>Clique no botão "Avaliação rápida de CV" na página principal</li>
+                            <li>Ou acesse pelo menu "AVALIAÇÃO" na barra de navegação</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Preencha as 4 Etapas</h3>
+                        <p>O formulário é dividido em 4 partes simples:</p>
+                        <div class="etapas-grid">
+                            <div class="etapa-item">
+                                <div class="etapa-icon">👤</div>
+                                <strong>Etapa 1</strong>
+                                <p>Informações Pessoais</p>
+                            </div>
+                            <div class="etapa-item">
+                                <div class="etapa-icon">🎓</div>
+                                <strong>Etapa 2</strong>
+                                <p>Formação Acadêmica</p>
+                            </div>
+                            <div class="etapa-item">
+                                <div class="etapa-icon">💡</div>
+                                <strong>Etapa 3</strong>
+                                <p>Habilidades e Competências</p>
+                            </div>
+                            <div class="etapa-item">
+                                <div class="etapa-icon"></div>
+                                <strong>Etapa 4</strong>
+                                <p>Projetos e Interesses</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Seja Honesto nas Respostas</h3>
+                        <p>Quanto mais precisas forem suas respostas, melhores serão as recomendações. Não exagere nem diminua suas habilidades.</p>
+                        <div class="step-warning">
+                            <svg viewBox="0 0 24 24" fill="#f5a623"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                            <span>Informações falsas podem prejudicar suas chances de ser selecionado!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Receba seu Score de Match</h3>
+                        <p>Após finalizar, você verá:</p>
+                        <ul class="info-list">
+                            <li><strong>Score de Match</strong> - Percentual de compatibilidade com vagas</li>
+                            <li><strong>Vagas Recomendadas</strong> - Lista personalizada para você</li>
+                            <li><strong>Relatório</strong> - Análise detalhada do seu perfil</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Candidate-se às Vagas</h3>
+                        <p>Clique em "Candidatar-se às Vagas" para aplicar automaticamente às vagas recomendadas, ou escolha individualmente as que mais te interessam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: CONTA -->
+        <section class="tutorial-section" id="conta">
+            <div class="section-header">
+                <h2>Gerenciamento de Conta</h2>
+                <p>Configure seu perfil e preferências</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Acesse sua Conta</h3>
+                        <p>Clique em "CONTA" na barra de navegação superior para acessar as configurações do seu perfil.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Complete seu Perfil</h3>
+                        <p>Um perfil completo aumenta suas chances em até 80%! Preencha:</p>
+                        <ul class="info-list">
+                            <li>Foto de perfil profissional</li>
+                            <li>Informações de contato atualizadas</li>
+                            <li>Resumo profissional (sobre mim)</li>
+                            <li>Links para redes sociais profissionais</li>
+                            <li>Portfólio ou projetos (se tiver)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Configurações de Notificações</h3>
+                        <p>Escolha como quer receber alertas:</p>
+                        <div class="notification-options">
+                            <label class="notification-item">
+                                <input type="checkbox" checked>
+                                <span>Novas vagas compatíveis</span>
+                            </label>
+                            <label class="notification-item">
+                                <input type="checkbox" checked>
+                                <span>Status de candidaturas</span>
+                            </label>
+                            <label class="notification-item">
+                                <input type="checkbox">
+                                <span>Newsletter semanal</span>
+                            </label>
+                            <label class="notification-item">
+                                <input type="checkbox" checked>
+                                <span>Mensagens de recrutadores</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Segurança da Conta</h3>
+                        <p>Mantenha sua conta segura:</p>
+                        <ul class="info-list">
+                            <li>Use uma senha forte e única</li>
+                            <li>Ative a autenticação em dois fatores</li>
+                            <li>Não compartilhe seus dados de acesso</li>
+                            <li>Verifique regularmente suas atividades</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="section-header">
+                <h2>Perguntas Frequentes</h2>
+                <p>Respostas para as dúvidas mais comuns</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como funciona o sistema de recomendações?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="#7c5cfc"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nosso sistema usa inteligência artificial para analisar seu perfil, habilidades, experiências e preferências. Com base nessa análise, recomendamos vagas que têm alta compatibilidade com o que você busca. Quanto mais completo seu perfil, melhores serão as recomendações.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Não tenho experiência. Posso usar o sistema?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="#7c5cfc"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Nosso sistema foi desenvolvido pensando em todos os níveis de experiência. Use a "Avaliação Rápida de CV" que analisa suas habilidades, projetos pessoais, formação acadêmica e potencial, não apenas experiência formal. Muitas empresas parceiras oferecem vagas para primeiro emprego e estágio.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como posso aumentar meu score de match?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="#7c5cfc"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Dicas para melhorar seu score:</p>
+                        <ul>
+                            <li>Complete 100% do seu perfil</li>
+                            <li>Adicione todas as suas habilidades relevantes</li>
+                            <li>Descreva projetos pessoais e extracurriculares</li>
+                            <li>Mantenha suas informações atualizadas</li>
+                            <li>Seja específico sobre seus objetivos profissionais</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Meus dados estão seguros?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="#7c5cfc"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Utilizamos criptografia de ponta a ponta para proteger todas as suas informações. Seus dados são usados apenas para melhorar suas recomendações e nunca são compartilhados com terceiros sem sua autorização. Seguimos todas as diretrizes da LGPD (Lei Geral de Proteção de Dados).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Posso me candidatar a várias vagas ao mesmo tempo?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="#7c5cfc"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Não há limite de candidaturas. Você pode se candidatar a quantas vagas quiser. Recomendamos que leia cuidadosamente a descrição de cada vaga antes de se candidatar, para garantir que seu perfil é compatível com os requisitos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como entro em contato com o suporte?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="#7c5cfc"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Você pode entrar em contato conosco através de:</p>
+                        <ul>
+                            <li><strong>E-mail:</strong> suporte@sistemavagas.com</li>
+                            <li><strong>Chat:</strong> Disponível 24/7 na plataforma</li>
+                            <li><strong>Telefone:</strong> 0800 123 4567 (segunda a sexta, 8h às 18h)</li>
+                            <li><strong>Redes sociais:</strong> @sistemavagas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIPS SECTION -->
+    <section class="tips-section">
+        <div class="tips-container">
+            <div class="section-header">
+                <h2>** Dicas para ter Sucesso</h2>
+                <p>Maximize suas chances de conseguir a vaga dos sonhos</p>
+            </div>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">📝</div>
+                    <h3>Perfil Completo</h3>
+                    <p>Preencha todos os campos do seu perfil. Perfis completos recebem 5x mais visualizações de recrutadores.</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">🎯</div>
+                    <h3>Seja Específico</h3>
+                    <p>Descreva claramente seus objetivos e habilidades. Isso ajuda o sistema a encontrar vagas mais adequadas.</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">⚡</div>
+                    <h3>Responda Rápido</h3>
+                    <p>Quando receber uma oferta ou convite para entrevista, responda o mais rápido possível.</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">🔄</div>
+                    <h3>Mantenha Atualizado</h3>
+                    <p>Atualize seu perfil regularmente com novas habilidades, cursos e experiências adquiridas.</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">📊</div>
+                    <h3>Acompanhe o Histórico</h3>
+                    <p>Monitore suas candidaturas e aprenda com os feedbacks para melhorar suas próximas aplicações.</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">🤝</div>
+                    <h3>Networking</h3>
+                    <p>Conecte seu LinkedIn e outras redes profissionais. Muitas vagas surgem através de indicações.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUPPORT CTA -->
+    <section class="support-cta">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Ainda tem dúvidas?</h2>
+                <p>Nossa equipe de suporte está pronta para te ajudar</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary">
+                        
+                        Iniciar Chat
+                    </button>
+                    <button class="btn-secondary">
+                        <svg viewBox="0 0 24 24" fill="#fff"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        Enviar E-mail
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sistema de Vagas</h4>
+                <p>Conectando talentos às melhores oportunidades do mercado.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#">Página Principal</a></li>
+                    <li><a href="#">Histórico</a></li>
+                    <li><a href="#">Avaliação CV</a></li>
+                    <li><a href="#">Minha Conta</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sistema de Vagas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript externo -->
+    <script src="script-ajuda.js"></script>
+</body>
+</html>

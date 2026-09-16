@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico - Sistema de Vagas</title>
+    <script src="script-theme.js"></script>
+    <link rel="stylesheet" href="style-historico.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+          <div class="nome"><a>HISTÓRICO</a></div>
+        <div class="logo">
+            <span>ConectaVagas</span>
+        </div>
+        <div class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </div>
+        <div class="theme-toggle"></div>
+        <div class="nav-links">
+            <a href="ajuda.html">AJUDA</a>
+            <a href="index.html">PÁGINA PRINCIPAL</a>
+            <a href="historico.html">HISTÓRICO</a>
+            <a href="perfil.html">CONTA</a>
+            <a href="sobre.html">SOBRE</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Seu <span>Histórico</span></h1>
+            <p>Acompanhe todas as suas atividades, candidaturas e visualizações de vagas.</p>
+            <div class="hero-divider"></div>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="#7c5cfc"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                </div>
+                <div class="stat-info">
+                    <h3>24</h3>
+                    <p>Vagas Visualizadas</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="#00c853"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                </div>
+                <div class="stat-info">
+                    <h3>12</h3>
+                    <p>Candidaturas</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+                <div class="stat-info">
+                    <h3>5</h3>
+                    <p>Entrevistas</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <svg viewBox="0 0 24 24" fill="#ea4335"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <div class="stat-info">
+                    <h3>2</h3>
+                    <p>Ofertas Recebidas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTER SECTION -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">Todas</button>
+                <button class="filter-tab" data-filter="candidatura">Candidaturas</button>
+                <button class="filter-tab" data-filter="visualizacao">Visualizações</button>
+                <button class="filter-tab" data-filter="entrevista">Entrevistas</button>
+                <button class="filter-tab" data-filter="oferta">Ofertas</button>
+            </div>
+            <div class="filter-search">
+                <svg viewBox="0 0 24 24" fill="#8a8db0"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <input id="history-search" type="search" placeholder="Buscar no histórico...">
+            </div>
+        </div>
+    </section>
+
+    <!-- HISTORY TIMELINE -->
+    <section class="history-section">
+        <div class="timeline-container">
+            
+            <!-- History Item 1 -->
+            <div class="timeline-item" data-type="candidatura">
+                <div class="timeline-marker accepted">
+                    <svg viewBox="0 0 24 24" fill="#fff"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Desenvolvedor Front-End Pleno</h3>
+                        <span class="company">Tech Solutions Ltda</span>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="detail-item">
+                            <span class="label">Tipo:</span>
+                            <span class="value">Candidatura</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="status accepted">Aceito para entrevista</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Data:</span>
+                            <span class="value">05 Set 2026, 14:30</span>
+                        </div>
+                    </div>
+                    <div class="timeline-actions">
+                        <button class="btn-secondary">Ver Vaga</button>
+                        <button class="btn-primary">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Item 2 -->
+            <div class="timeline-item" data-type="candidatura">
+                <div class="timeline-marker pending">
+                    <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Analista de Sistemas Júnior</h3>
+                        <span class="company">DataCorp Brasil</span>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="detail-item">
+                            <span class="label">Tipo:</span>
+                            <span class="value">Candidatura</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="status pending">Em análise</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Data:</span>
+                            <span class="value">03 Set 2026, 09:15</span>
+                        </div>
+                    </div>
+                    <div class="timeline-actions">
+                        <button class="btn-secondary">Ver Vaga</button>
+                        <button class="btn-primary">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Item 3 -->
+            <div class="timeline-item" data-type="visualizacao">
+                <div class="timeline-marker viewed">
+                    <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>UX/UI Designer</h3>
+                        <span class="company">Creative Studio</span>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="detail-item">
+                            <span class="label">Tipo:</span>
+                            <span class="value">Visualização</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="status viewed">Visualizado</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Data:</span>
+                            <span class="value">02 Set 2026, 16:45</span>
+                        </div>
+                    </div>
+                    <div class="timeline-actions">
+                        <button class="btn-secondary">Ver Vaga</button>
+                        <button class="btn-primary">Candidatar-se</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Item 4 -->
+            <div class="timeline-item" data-type="entrevista">
+                <div class="timeline-marker interview">
+                    <svg viewBox="0 0 24 24" fill="#fff"><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Desenvolvedor Full Stack</h3>
+                        <span class="company">Innovation Tech</span>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="detail-item">
+                            <span class="label">Tipo:</span>
+                            <span class="value">Entrevista</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="status interview">Entrevista agendada</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Data:</span>
+                            <span class="value">01 Set 2026, 10:00</span>
+                        </div>
+                    </div>
+                    <div class="timeline-actions">
+                        <button class="btn-secondary">Ver Vaga</button>
+                        <button class="btn-primary">Detalhes</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Item 5 -->
+            <div class="timeline-item" data-type="oferta">
+                <div class="timeline-marker offer">
+                    <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Tech Lead - React</h3>
+                        <span class="company">StartupXYZ</span>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="detail-item">
+                            <span class="label">Tipo:</span>
+                            <span class="value">Oferta</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="status offer">Oferta recebida</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Data:</span>
+                            <span class="value">28 Ago 2026, 11:30</span>
+                        </div>
+                    </div>
+                    <div class="timeline-actions">
+                        <button class="btn-secondary">Ver Oferta</button>
+                        <button class="btn-primary">Responder</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- History Item 6 -->
+            <div class="timeline-item" data-type="candidatura">
+                <div class="timeline-marker rejected">
+                    <svg viewBox="0 0 24 24" fill="#fff"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                </div>
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <h3>Desenvolvedor Back-End</h3>
+                        <span class="company">Enterprise Solutions</span>
+                    </div>
+                    <div class="timeline-details">
+                        <div class="detail-item">
+                            <span class="label">Tipo:</span>
+                            <span class="value">Candidatura</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Status:</span>
+                            <span class="status rejected">Não selecionado</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Data:</span>
+                            <span class="value">25 Ago 2026, 14:00</span>
+                        </div>
+                    </div>
+                    <div class="timeline-actions">
+                        <button class="btn-secondary">Ver Feedback</button>
+                        <button class="btn-primary">Arquivar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EXPORT SECTION -->
+    <section class="export-section">
+        <div class="export-container">
+            <h2>Exportar Histórico</h2>
+            <p>Baixe seu histórico completo em diferentes formatos</p>
+            <div class="export-buttons">
+                <button class="btn-export">
+                    <svg viewBox="0 0 24 24" fill="#fff"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                    <span>PDF</span>
+                </button>
+                <button class="btn-export">
+                    <svg viewBox="0 0 24 24" fill="#fff"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                    <span>Excel</span>
+                </button>
+                <button class="btn-export">
+                    <svg viewBox="0 0 24 24" fill="#fff"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+                    <span>CSV</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+<footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sistema de Vagas</h4>
+                <p>Conectando talentos às melhores oportunidades do mercado.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#">Página Principal</a></li>
+                    <li><a href="#">Histórico</a></li>
+                    <li><a href="#">Avaliação CV</a></li>
+                    <li><a href="#">Minha Conta</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sistema de Vagas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script-historico.js"></script>
+</body>
+</html>

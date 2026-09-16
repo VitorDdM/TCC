@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Nova Vaga | ConectaVagas</title>
+    <link rel="stylesheet" href="style-criar-vaga.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+         <div class="nome"><a>CRIAR VAGAS</a></div>
+        <div class="logo">
+            <a href="index-gerente.html"> ConectaVagas</a>
+        </div>
+        <div class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </div>
+        <div class="theme-toggle"></div>
+        <div class="nav-links">
+            <a href="ajuda.html">AJUDA</a>
+            <a href="index-gerente.html">PAINEL</a>
+            <a href="vagas-gerente.html">MINHAS VAGAS</a>
+            <a href="candidatos.html">CANDIDATOS</a>
+            <a href="perfil-empresa.html">EMPRESA</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                <svg viewBox="0 0 24 24" fill="#7c5cfc"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                <span>Publicar oportunidade</span>
+            </div>
+            <h1>Criar <span>Nova Vaga</span></h1>
+            <p>Preencha as informações da vaga para atrair os melhores candidatos. Quanto mais detalhada, maior a qualidade das candidaturas.</p>
+            <div class="hero-divider"></div>
+        </div>
+    </section>
+
+    <!-- PROGRESS BAR -->
+    <section class="progress-section">
+        <div class="progress-container">
+            <div class="progress-info">
+                <span>Progresso da publicação</span>
+                <span class="progress-text" id="progress-text">Etapa 1 de 4</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 25%;"></div>
+            </div>
+            <div class="progress-steps">
+                <div class="step-indicator active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-label">Informações Básicas</span>
+                </div>
+                <div class="step-indicator" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-label">Detalhes</span>
+                </div>
+                <div class="step-indicator" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-label">Descrição</span>
+                </div>
+                <div class="step-indicator" data-step="4">
+                    <span class="step-number">4</span>
+                    <span class="step-label">Revisão</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO -->
+    <section class="form-section">
+        <div class="form-container">
+            <form id="vacancy-form" class="vacancy-form">
+                
+                <!-- ETAPA 1: Informações Básicas -->
+                <div class="form-step active" id="step-1">
+                    <div class="step-header">
+                        <h2>Informações Básicas</h2>
+                        <p>Dados principais da vaga</p>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="titulo">Título da Vaga *</label>
+                        <input type="text" id="titulo" name="titulo" placeholder="Ex: Desenvolvedor Front-End Pleno" required>
+                        <span class="field-hint">Use um título claro e específico</span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="area">Área *</label>
+                            <select id="area" name="area" required>
+                                <option value="">Selecione...</option>
+                                <option value="TI">Tecnologia</option>
+                                <option value="Design">Design</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value="Administrativo">Administrativo</option>
+                                <option value="Vendas">Vendas</option>
+                                <option value="RH">Recursos Humanos</option>
+                                <option value="Financeiro">Financeiro</option>
+                                <option value="Operacional">Operacional</option>
+                                <option value="Jurídico">Jurídico</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="departamento">Departamento</label>
+                            <input type="text" id="departamento" name="departamento" placeholder="Ex: Engenharia de Software">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tipo">Tipo de Contrato *</label>
+                            <select id="tipo" name="tipo" required>
+                                <option value="">Selecione...</option>
+                                <option value="CLT">CLT</option>
+                                <option value="PJ">PJ</option>
+                                <option value="Estágio">Estágio</option>
+                                <option value="Freelance">Freelance</option>
+                                <option value="Temporário">Temporário</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nivel">Nível de Experiência *</label>
+                            <select id="nivel" name="nivel" required>
+                                <option value="">Selecione...</option>
+                                <option value="Sem experiência">Sem experiência</option>
+                                <option value="Júnior">Júnior</option>
+                                <option value="Pleno">Pleno</option>
+                                <option value="Sênior">Sênior</option>
+                                <option value="Especialista">Especialista</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="num-vagas">Número de Vagas *</label>
+                        <input type="number" id="num-vagas" name="num-vagas" min="1" value="1" required>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-back" disabled>Voltar</button>
+                        <button type="button" class="btn-next" id="btn-next-1">
+                            Continuar
+                            <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ETAPA 2: Detalhes -->
+                <div class="form-step" id="step-2">
+                    <div class="step-header">
+                        <h2>Detalhes da Vaga</h2>
+                        <p>Localização, salário e modalidade</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Modalidade de Trabalho *</label>
+                        <div class="radio-group">
+                            <label class="radio-card">
+                                <input type="radio" name="modalidade" value="Presencial" required>
+                                <div class="radio-content">
+                                    <svg viewBox="0 0 24 24" fill="#7c5cfc"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                                    <span>Presencial</span>
+                                </div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="modalidade" value="Híbrido" required>
+                                <div class="radio-content">
+                                    <svg viewBox="0 0 24 24" fill="#7c5cfc"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                                    <span>Híbrido</span>
+                                </div>
+                            </label>
+                            <label class="radio-card">
+                                <input type="radio" name="modalidade" value="Remoto" required>
+                                <div class="radio-content">
+                                    <svg viewBox="0 0 24 24" fill="#7c5cfc"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+                                    <span>Remoto</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" placeholder="Ex: São Paulo">
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado</label>
+                            <input type="text" id="estado" name="estado" placeholder="Ex: SP" maxlength="2">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="salario-min">Salário Mínimo (R$)</label>
+                            <input type="number" id="salario-min" name="salario-min" placeholder="3000" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="salario-max">Salário Máximo (R$)</label>
+                            <input type="number" id="salario-max" name="salario-max" placeholder="5000" min="0">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prazo">Prazo para Candidatura *</label>
+                        <input type="date" id="prazo" name="prazo" required>
+                        <span class="field-hint">Defina uma data limite para receber candidaturas</span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-back" id="btn-back-2">Voltar</button>
+                        <button type="button" class="btn-next" id="btn-next-2">
+                            Continuar
+                            <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ETAPA 3: Descrição e Requisitos -->
+                <div class="form-step" id="step-3">
+                    <div class="step-header">
+                        <h2>Descrição e Requisitos</h2>
+                        <p>Detalhe a vaga para atrair candidatos qualificados</p>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="descricao">Descrição da Vaga *</label>
+                        <textarea id="descricao" name="descricao" rows="5" placeholder="Descreva as responsabilidades, o dia a dia e o que o candidato fará na função..." required></textarea>
+                        <span class="field-hint">Seja claro e objetivo. Descrições detalhadas recebem 3x mais candidaturas.</span>
+                    </div>
+
+                    <div class="form-group full">
+                        <label>Requisitos *</label>
+                        <div class="dynamic-list" id="requisitos-list">
+                            <div class="dynamic-item">
+                                <input type="text" placeholder="Ex: 3+ anos de experiência com React" class="dynamic-input">
+                                <button type="button" class="btn-remove" aria-label="Remover">
+                                    <svg viewBox="0 0 24 24" fill="#fff"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-add" id="btn-add-requisito">
+                            <svg viewBox="0 0 24 24" fill="#fff"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                            Adicionar requisito
+                        </button>
+                    </div>
+
+                    <div class="form-group full">
+                        <label>Diferenciais (opcional)</label>
+                        <div class="dynamic-list" id="diferenciais-list">
+                            <div class="dynamic-item">
+                                <input type="text" placeholder="Ex: Inglês fluente" class="dynamic-input">
+                                <button type="button" class="btn-remove" aria-label="Remover">
+                                    <svg viewBox="0 0 24 24" fill="#fff"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn-add" id="btn-add-diferencial">
+                            <svg viewBox="0 0 24 24" fill="#fff"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                            Adicionar diferencial
+                        </button>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-back" id="btn-back-3">Voltar</button>
+                        <button type="button" class="btn-next" id="btn-next-3">
+                            Continuar
+                            <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ETAPA 4: Revisão e Publicação -->
+                <div class="form-step" id="step-4">
+                    <div class="step-header">
+                        <h2>Revisar e Publicar</h2>
+                        <p>Confira as informações antes de publicar</p>
+                    </div>
+
+                    <div class="preview-container">
+                        <div class="preview-header">
+                            <div class="preview-company">
+                                <div class="company-logo-preview">T</div>
+                                <div>
+                                    <h3 id="preview-titulo">Título da Vaga</h3>
+                                    <p class="company-name">Tech Solutions Ltda</p>
+                                </div>
+                            </div>
+                            <span class="status-badge nova">Nova</span>
+                        </div>
+
+                        <div class="preview-tags" id="preview-tags">
+                            <!-- Tags injetadas via JS -->
+                        </div>
+
+                        <div class="preview-section">
+                            <h4>📋 Descrição</h4>
+                            <p id="preview-descricao">A descrição da vaga aparecerá aqui...</p>
+                        </div>
+
+                        <div class="preview-section">
+                            <h4>✅ Requisitos</h4>
+                            <ul id="preview-requisitos">
+                                <li>Os requisitos aparecerão aqui...</li>
+                            </ul>
+                        </div>
+
+                        <div class="preview-section">
+                            <h4>🌟 Diferenciais</h4>
+                            <ul id="preview-diferenciais">
+                                <li>Os diferenciais aparecerão aqui...</li>
+                            </ul>
+                        </div>
+
+                        <div class="preview-info-grid">
+                            <div class="preview-info-item">
+                                <span> Localização</span>
+                                <strong id="preview-localizacao">-</strong>
+                            </div>
+                            <div class="preview-info-item">
+                                <span>💰 Salário</span>
+                                <strong id="preview-salario">-</strong>
+                            </div>
+                            <div class="preview-info-item">
+                                <span> Prazo</span>
+                                <strong id="preview-prazo">-</strong>
+                            </div>
+                            <div class="preview-info-item">
+                                <span>👥 Vagas</span>
+                                <strong id="preview-num-vagas">1</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="termos" required>
+                            <span>Confirmo que as informações são verdadeiras e estão de acordo com as políticas da empresa *</span>
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-back" id="btn-back-4">Voltar</button>
+                        <button type="button" class="btn-save-draft" id="btn-save-draft">
+                            <svg viewBox="0 0 24 24" fill="#fff"><path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"/></svg>
+                            Salvar Rascunho
+                        </button>
+                        <button type="submit" class="btn-submit" id="btn-submit">
+                            <svg viewBox="0 0 24 24" fill="#fff"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Publicar Vaga
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ConectaVagas</h4>
+                <p>Conectando talentos às melhores oportunidades do mercado.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index-gerente.html">Painel</a></li>
+                    <li><a href="vagas-gerente.html">Minhas Vagas</a></li>
+                    <li><a href="candidatos.html">Candidatos</a></li>
+                    <li><a href="perfil-empresa.html">Empresa</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="ajuda.html">Central de Ajuda</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ConectaVagas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script-theme.js"></script>
+    <script src="script-criar-vaga.js"></script>
+</body>
+</html>

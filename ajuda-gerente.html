@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Ajuda - Gerente | ConectaVagas</title>
+    <link rel="stylesheet" href="style-ajuda-gerente.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+                <div class="nome"><a>AJUDA</a></div>
+        <div class="logo">
+            <a href="index-gerente.html"> ConectaVagas</a>
+        </div>
+        <div class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </div>
+        <div class="theme-toggle"></div>
+        <div class="nav-links">
+            <a href="ajuda-gerente.html">AJUDA</a>
+            <a href="index-gerente.html">PAINEL</a>
+            <a href="vagas-gerente.html">MINHAS VAGAS</a>
+            <a href="candidatos.html">CANDIDATOS</a>
+            <a href="perfil-empresa.html">EMPRESA</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                <svg viewBox="0 0 24 24" fill="#7c5cfc"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+                <span>Central de Ajuda - Gerente</span>
+            </div>
+            <h1>Como usar o <span>Painel do Gerente</span></h1>
+            <p>Aprenda passo a passo como gerenciar vagas, avaliar candidatos e aproveitar ao máximo todas as funcionalidades da plataforma para empresas.</p>
+            <div class="hero-divider"></div>
+        </div>
+
+        <div class="quick-search">
+            <svg viewBox="0 0 24 24" fill="#8a8db0"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="text" id="search-input" placeholder="Buscar ajuda... (ex: como criar vaga)">
+        </div>
+    </section>
+
+    <!-- NAVIGATION TABS -->
+    <section class="tabs-section">
+        <div class="tabs-container">
+            <button class="tab-btn active" data-target="painel">
+                <svg viewBox="0 0 24 24" fill="#fff"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+                <span>Painel</span>
+            </button>
+            <button class="tab-btn" data-target="vagas">
+                <svg viewBox="0 0 24 24" fill="#fff"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+                <span>Criar Vagas</span>
+            </button>
+            <button class="tab-btn" data-target="candidatos">
+                <svg viewBox="0 0 24 24" fill="#fff"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                <span>Candidatos</span>
+            </button>
+            <button class="tab-btn" data-target="empresa">
+                <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                <span>Perfil da Empresa</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- TUTORIAL CONTENT -->
+    <main class="tutorial-content">
+
+        <!-- SEÇÃO: PAINEL -->
+        <section class="tutorial-section active" id="painel">
+            <div class="section-header">
+                <h2>🎯 Painel do Gerente</h2>
+                <p>Visão geral do seu painel de controle</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Acesse o Painel</h3>
+                        <p>Após o login como empresa, você será direcionado automaticamente para o painel principal. Aqui você terá uma visão geral de todas as métricas importantes da sua empresa.</p>
+                        <div class="step-tip">
+                            <svg viewBox="0 0 24 24" fill="#7c5cfc"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/></svg>
+                            <span>Dica: Adicione o painel aos favoritos para acesso rápido!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Entenda as Estatísticas</h3>
+                        <p>No topo do painel, você encontrará 4 cards com métricas essenciais:</p>
+                        <div class="stats-explanation">
+                            <div class="stat-item">
+                                <div class="stat-icon purple"></div>
+                                <div class="stat-desc">
+                                    <strong>Vagas Ativas</strong>
+                                    <p>Total de oportunidades publicadas</p>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon green">👥</div>
+                                <div class="stat-desc">
+                                    <strong>Candidatos Recebidos</strong>
+                                    <p>Total de candidaturas em todas as vagas</p>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon yellow">🎤</div>
+                                <div class="stat-desc">
+                                    <strong>Entrevistas Agendadas</strong>
+                                    <p>Processos seletivos em andamento</p>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon red">✅</div>
+                                <div class="stat-desc">
+                                    <strong>Vagas Preenchidas</strong>
+                                    <p>Contratações concluídas no período</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Ações Rápidas</h3>
+                        <p>Na parte inferior do painel, você encontra atalhos para as ações mais comuns:</p>
+                        <ul class="info-list">
+                            <li><strong>Publicar Vaga</strong> - Crie uma nova oportunidade em poucos cliques</li>
+                            <li><strong>Revisar Candidatos</strong> - Analise os perfis recebidos</li>
+                            <li><strong>Agendar Entrevista</strong> - Organize processos seletivos</li>
+                            <li><strong>Gerar Relatório</strong> - Exporte dados de recrutamento</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Vagas Publicadas e Candidatos Recentes</h3>
+                        <p>O painel também exibe uma prévia das suas vagas ativas e dos últimos candidatos que se inscreveram. Use os botões "Ver todos" para acessar as páginas completas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: CRIAR VAGAS -->
+        <section class="tutorial-section" id="vagas">
+            <div class="section-header">
+                <h2>💼 Criar e Gerenciar Vagas</h2>
+                <p>Publique oportunidades e atraia os melhores talentos</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card highlight-card">
+                    <div class="step-number special">⭐</div>
+                    <div class="step-content">
+                        <h3>Como criar uma vaga atrativa?</h3>
+                        <p>Vagas bem descritas recebem até 3x mais candidaturas qualificadas. Siga estas diretrizes:</p>
+                        <ul class="info-list">
+                            <li>Use um título claro e específico (ex: "Desenvolvedor Front-End Pleno")</li>
+                            <li>Descreva responsabilidades do dia a dia</li>
+                            <li>Liste requisitos essenciais e diferenciais separadamente</li>
+                            <li>Informe faixa salarial sempre que possível</li>
+                            <li>Destaque benefícios e cultura da empresa</li>
+                        </ul>
+                        <div class="step-tip">
+                            <svg viewBox="0 0 24 24" fill="#00c853"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            <span>Vagas com salário informado recebem 40% mais candidaturas!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Acesse a Criação de Vaga</h3>
+                        <p>Você pode criar uma vaga de três formas:</p>
+                        <ol class="numbered-list">
+                            <li>Clique em "Publicar Nova Vaga" no painel principal</li>
+                            <li>Use o botão "Criar Nova Vaga" na página Minhas Vagas</li>
+                            <li>Acesse diretamente pelo menu superior</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Preencha as 4 Etapas</h3>
+                        <p>O formulário é dividido em partes simples:</p>
+                        <div class="etapas-grid">
+                            <div class="etapa-item">
+                                <div class="etapa-icon"></div>
+                                <strong>Etapa 1</strong>
+                                <p>Informações Básicas</p>
+                            </div>
+                            <div class="etapa-item">
+                                <div class="etapa-icon"></div>
+                                <strong>Etapa 2</strong>
+                                <p>Detalhes e Localização</p>
+                            </div>
+                            <div class="etapa-item">
+                                <div class="etapa-icon">📋</div>
+                                <strong>Etapa 3</strong>
+                                <p>Descrição e Requisitos</p>
+                            </div>
+                            <div class="etapa-item">
+                                <div class="etapa-icon">👁️</div>
+                                <strong>Etapa 4</strong>
+                                <p>Revisão e Publicação</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Salve como Rascunho</h3>
+                        <p>Não precisa publicar imediatamente! Use o botão "Salvar Rascunho" para finalizar a vaga depois. Rascunhos ficam salvos e podem ser editados a qualquer momento.</p>
+                        <div class="step-warning">
+                            <svg viewBox="0 0 24 24" fill="#f5a623"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+                            <span>Atenção: Rascunhos não são visíveis para candidatos até serem publicados.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Gerencie suas Vagas</h3>
+                        <p>Na página "Minhas Vagas" você pode:</p>
+                        <ul class="info-list">
+                            <li><strong>Filtrar</strong> por status (ativas, pausadas, rascunhos, preenchidas)</li>
+                            <li><strong>Buscar</strong> vagas por título, área ou departamento</li>
+                            <li><strong>Ordenar</strong> por data, número de candidatos ou título</li>
+                            <li><strong>Pausar/Ativar</strong> vagas a qualquer momento</li>
+                            <li><strong>Excluir</strong> vagas que não fazem mais sentido</li>
+                            <li><strong>Ver detalhes</strong> completos de cada oportunidade</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: CANDIDATOS -->
+        <section class="tutorial-section" id="candidatos">
+            <div class="section-header">
+                <h2>👥 Gerenciar Candidatos</h2>
+                <p>Encontre e avalie os melhores talentos</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Busque Candidatos</h3>
+                        <p>Na página "Candidatos", use a barra de pesquisa para encontrar profissionais por:</p>
+                        <div class="filter-examples">
+                            <span class="filter-tag">Nome</span>
+                            <span class="filter-tag">Habilidade técnica</span>
+                            <span class="filter-tag">Soft skill</span>
+                            <span class="filter-tag">Área de atuação</span>
+                            <span class="filter-tag">Localização</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Use os Filtros Avançados</h3>
+                        <p>Refine sua busca com filtros específicos:</p>
+                        <ul class="info-list">
+                            <li><strong>Formação</strong> - Ensino Médio, Técnico, Superior, Pós-graduação</li>
+                            <li><strong>Área de Atuação</strong> - TI, Design, Marketing, etc.</li>
+                            <li><strong>Disponibilidade</strong> - Integral, Meio Período, Estágio, Freelance</li>
+                            <li><strong>Nível de Experiência</strong> - De sem experiência a 5+ anos</li>
+                            <li><strong>Pretensão Salarial</strong> - 5 faixas salariais</li>
+                            <li><strong>Match mínimo</strong> - Slider de 0% a 100%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Analise o Perfil Completo</h3>
+                        <p>Clique em qualquer candidato para ver:</p>
+                        <ul class="info-list">
+                            <li>Bio profissional e objetivos</li>
+                            <li>Habilidades técnicas detalhadas</li>
+                            <li>Soft skills avaliadas</li>
+                            <li>Projetos e experiências</li>
+                            <li>Idiomas e informações de contato</li>
+                            <li>Score de match com suas vagas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Entre em Contato</h3>
+                        <p>Encontrou o candidato ideal? Use o botão "Entrar em contato" para enviar uma mensagem ou convites para entrevista. Você também pode salvar candidatos para consultar depois.</p>
+                        <div class="step-tip">
+                            <svg viewBox="0 0 24 24" fill="#7c5cfc"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z"/></svg>
+                            <span>Dica: Responda candidatos em até 48h para melhor experiência!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: PERFIL DA EMPRESA -->
+        <section class="tutorial-section" id="empresa">
+            <div class="section-header">
+                <h2>🏢 Perfil da Empresa</h2>
+                <p>Construa uma marca empregadora forte</p>
+            </div>
+
+            <div class="steps-container">
+                <div class="step-card highlight-card">
+                    <div class="step-number special">⭐</div>
+                    <div class="step-content">
+                        <h3>Por que um perfil completo importa?</h3>
+                        <p>Empresas com perfis completos recebem até 5x mais candidaturas qualificadas. Candidatos pesquisam sobre a empresa antes de se inscrever!</p>
+                        <div class="step-tip">
+                            <svg viewBox="0 0 24 24" fill="#00c853"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            <span>Perfis verificados têm 70% mais credibilidade junto aos candidatos.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Acesse o Perfil da Empresa</h3>
+                        <p>Clique em "EMPRESA" na barra de navegação superior. Aqui você verá todas as informações públicas da sua empresa, como os candidatos as veem.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Complete as Informações</h3>
+                        <p>Um perfil completo deve incluir:</p>
+                        <ul class="info-list">
+                            <li><strong>Logo e nome</strong> da empresa</li>
+                            <li><strong>Tagline</strong> - frase que define sua missão</li>
+                            <li><strong>Sobre</strong> - história e propósito da empresa</li>
+                            <li><strong>Cultura e valores</strong> - o que define seu ambiente</li>
+                            <li><strong>Benefícios</strong> - lista completa de vantagens</li>
+                            <li><strong>Informações de contato</strong> - endereço, e-mail, telefone, site</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Monitore as Avaliações</h3>
+                        <p>Candidatos podem avaliar sua empresa após processos seletivos. Mantenha uma boa reputação:</p>
+                        <ul class="info-list">
+                            <li>Responda feedbacks construtivos</li>
+                            <li>Mantenha processos seletivos transparentes</li>
+                            <li>Comunique-se com todos os candidatos</li>
+                            <li>Cumpra prazos prometidos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Destaque seus Benefícios</h3>
+                        <p>Benefícios são um dos principais fatores de decisão dos candidatos. Liste todos os diferenciais que sua empresa oferece, desde vale-refeição até stock options.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <div class="section-header">
+                <h2>❓ Perguntas Frequentes</h2>
+                <p>Respostas para as dúvidas mais comuns de gerentes</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como aumento o número de candidaturas nas minhas vagas?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="#7c5cfc"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Dicas comprovadas para atrair mais candidatos:</p>
+                        <ul>
+                            <li>Informe a faixa salarial (aumenta candidaturas em 40%)</li>
+                            <li>Descreva benefícios de forma detalhada</li>
+                            <li>Use títulos claros e específicos</li>
+                            <li>Mantenha o perfil da empresa completo</li>
+                            <li>Responda candidatos rapidamente</li>
+                            <li>Compartilhe vagas nas redes sociais da empresa</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Posso pausar uma vaga sem excluí-la?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="#7c5cfc"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Na página "Minhas Vagas", clique no botão "Pausar" ao lado da vaga desejada. A vaga ficará invisível para novos candidatos, mas você mantém todos os dados e candidaturas recebidas. Pode reativar a qualquer momento clicando em "Ativar".</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como funciona o score de match dos candidatos?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="#7c5cfc"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O score de match é calculado pela nossa IA com base na compatibilidade entre o perfil do candidato e os requisitos da vaga. São analisados: habilidades técnicas, soft skills, formação, experiência, localização e preferências. Scores acima de 80% indicam alta compatibilidade.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Posso editar uma vaga depois de publicada?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="#7c5cfc"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Acesse "Minhas Vagas", clique em "Ver Detalhes" na vaga desejada e depois em "Editar". As alterações serão aplicadas imediatamente. Candidatos que já se inscreveram mantêm suas informações originais.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como entro em contato com um candidato?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="#7c5cfc"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Na página de busca de candidatos, clique no card do candidato desejado para ver o perfil completo. Use o botão "Entrar em contato" para copiar o e-mail ou iniciar uma conversa. Recomendamos personalizar a mensagem mencionando a vaga de interesse.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como obtenho o selo de "Perfil Verificado"?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="#7c5cfc"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O selo de verificação é concedido automaticamente quando sua empresa:</p>
+                        <ul>
+                            <li>Possui CNPJ válido cadastrado</li>
+                            <li>Tem perfil 100% completo</li>
+                            <li>Possui pelo menos 3 vagas publicadas</li>
+                            <li>Mantém taxa de resposta acima de 70%</li>
+                        </ul>
+                        <p>Empresas verificadas aparecem com destaque nas buscas dos candidatos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Posso exportar dados dos candidatos?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="#7c5cfc"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Na página de cada vaga, você pode exportar a lista de candidatos em formatos PDF, Excel ou CSV. Os dados incluem nome, e-mail, telefone, score de match e status da candidatura. Lembre-se de usar os dados apenas para fins de recrutamento, respeitando a LGPD.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como entro em contato com o suporte?</span>
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="#7c5cfc"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Você pode entrar em contato conosco através de:</p>
+                        <ul>
+                            <li><strong>E-mail corporativo:</strong> empresas@conectavagas.com</li>
+                            <li><strong>Chat empresarial:</strong> Disponível 24/7 no painel</li>
+                            <li><strong>Telefone:</strong> 0800 765 4321 (segunda a sexta, 8h às 20h)</li>
+                            <li><strong>Gerente de conta:</strong> Para empresas premium</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIPS SECTION -->
+    <section class="tips-section">
+        <div class="tips-container">
+            <div class="section-header">
+                <h2>💡 Dicas para Recrutar com Sucesso</h2>
+                <p>Maximize seus resultados na plataforma</p>
+            </div>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon"></div>
+                    <h3>Vagas Detalhadas</h3>
+                    <p>Descreva responsabilidades, requisitos e benefícios. Vagas completas recebem 3x mais candidaturas qualificadas.</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">⚡</div>
+                    <h3>Responda Rápido</h3>
+                    <p>Candidatos esperam retorno em até 48h. Respostas ágeis aumentam sua taxa de aceitação em 60%.</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">💰</div>
+                    <h3>Informe o Salário</h3>
+                    <p>Vagas com faixa salarial recebem 40% mais candidaturas e reduzem desistências no processo.</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">🏢</div>
+                    <h3>Perfil Completo</h3>
+                    <p>Empresas com perfil 100% completo têm 5x mais visibilidade e atraem talentos de alto nível.</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">🎯</div>
+                    <h3>Use os Filtros</h3>
+                    <p>Filtre candidatos por habilidades, experiência e match. Encontre o perfil ideal em minutos.</p>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-icon">📊</div>
+                    <h3>Monitore Métricas</h3>
+                    <p>Acompanhe estatísticas do painel para otimizar suas estratégias de recrutamento continuamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUPPORT CTA -->
+    <section class="support-cta">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Precisa de ajuda adicional?</h2>
+                <p>Nossa equipe de suporte empresarial está pronta para te atender</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary" id="btn-chat">
+                        <svg viewBox="0 0 24 24" fill="#7c5cfc"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+                        Iniciar Chat Empresarial
+                    </button>
+                    <button class="btn-secondary" id="btn-email">
+                        <svg viewBox="0 0 24 24" fill="#fff"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        Enviar E-mail
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ConectaVagas</h4>
+                <p>Conectando talentos às melhores oportunidades do mercado.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index-gerente.html">Painel</a></li>
+                    <li><a href="vagas-gerente.html">Minhas Vagas</a></li>
+                    <li><a href="candidatos.html">Candidatos</a></li>
+                    <li><a href="perfil-empresa.html">Empresa</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="ajuda-gerente.html">Central de Ajuda</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ConectaVagas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script-theme.js"></script>
+    <script src="js/script-ajuda-gerente.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro pessoal | ConectaVagas</title>
+    <script src="script-theme.js"></script>
+    <link rel="stylesheet" href="style-cadastro.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nome">CONHEÇA SEU PERFIL</div>
+        <div class="logo">ConectaVagas</div>
+        <div class="theme-toggle" aria-label="Alternar tema"></div>
+        <div class="nav-links">
+            <a href="index.html">Início</a>
+            <a href="cadastroEmpresa.html">Cadastro de empresa</a>
+        </div>
+    </nav>
+
+    <main class="page-shell">
+        <section class="form-panel">
+            <p class="eyebrow">Cadastro pessoal</p>
+            <h1>Comece pelo seu perfil.</h1>
+            <p class="form-intro">Preencha seus dados uma vez. Depois, você poderá responder ao questionário comportamental e receber recomendações mais coerentes com seus objetivos.</p>
+
+            <form id="personal-registration">
+                <div class="form-grid">
+                    <div class="form-group full">
+                        <label for="nome">Nome completo *</label>
+                        <input id="nome" name="nome" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone">Telefone *</label>
+                        <input id="telefone" name="telefone" type="tel" autocomplete="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="idade">Idade *</label>
+                        <input id="idade" name="idade" type="number" min="14" max="100" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade e estado *</label>
+                        <input id="cidade" name="cidade" type="text" autocomplete="address-level2" required>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <a class="secondary-action" href="index.html">Voltar</a>
+                    <button class="primary-action" type="submit">Continuar para o questionário</button>
+                </div>
+            </form>
+
+            <p class="account-switch">Você representa uma organização? <a href="cadastroEmpresa.html">Cadastre sua empresa</a>.</p>
+        </section>
+    </main>
+
+    <script src="js/script-cadastro.js"></script>
+</body>
+</html>

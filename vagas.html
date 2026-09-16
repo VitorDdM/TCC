@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Vagas | ConectaVagas</title>
+    <link rel="stylesheet" href="style-vagas.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+         <div class="nome"><a>BUSCAR VAGAS</a></div>
+        <div class="logo">
+            <a href="index.html"> ConectaVagas</a>
+        </div>
+        <div class="nav-icon">
+            <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </div>
+        <div class="theme-toggle"></div>
+        <div class="nav-links">
+            <a href="ajuda.html">AJUDA</a>
+            <a href="index.html">PÁGINA PRINCIPAL</a>
+            <a href="historico.html">HISTÓRICO</a>
+            <a href="perfil.html">CONTA</a>
+            <a href="sobre.html">SOBRE</a>
+        </div>
+    </nav>
+
+    <!-- HERO / BUSCA PRINCIPAL -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                <svg viewBox="0 0 24 24" fill="#7c5cfc"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <span>Explore oportunidades</span>
+            </div>
+            <h1>Encontre a <span>vaga ideal</span> para você</h1>
+            <p>Pesquise entre centenas de oportunidades filtradas por área, nível, localização e muito mais.</p>
+            <div class="hero-divider"></div>
+        </div>
+
+        <div class="main-search">
+            <div class="search-box">
+                <svg viewBox="0 0 24 24" fill="#8a8db0"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <input type="text" id="main-search-input" placeholder="Buscar por cargo, empresa ou palavra-chave...">
+            </div>
+            <div class="search-box">
+                <svg viewBox="0 0 24 24" fill="#8a8db0"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <input type="text" id="location-input" placeholder="Cidade ou estado...">
+            </div>
+            <button class="btn-search" id="btn-main-search">
+                <svg viewBox="0 0 24 24" fill="#fff"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                Pesquisar
+            </button>
+        </div>
+    </section>
+
+    <!-- CONTEÚDO PRINCIPAL: FILTROS + RESULTADOS -->
+    <section class="search-layout">
+        
+        <!-- SIDEBAR DE FILTROS -->
+        <aside class="filters-sidebar">
+            <div class="filters-header">
+                <h3>Filtros</h3>
+                <button class="btn-clear-filters" id="btn-clear-filters">Limpar</button>
+            </div>
+
+            <!-- Filtro: Área -->
+            <div class="filter-group">
+                <h4>Área</h4>
+                <div class="filter-options" id="filter-area">
+                    <label class="filter-option">
+                        <input type="checkbox" value="TI">
+                        <span>Tecnologia</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Design">
+                        <span>Design</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Marketing">
+                        <span>Marketing</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Administrativo">
+                        <span>Administrativo</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Vendas">
+                        <span>Vendas</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="RH">
+                        <span>Recursos Humanos</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Financeiro">
+                        <span>Financeiro</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Filtro: Tipo de Contrato -->
+            <div class="filter-group">
+                <h4>Tipo de Contrato</h4>
+                <div class="filter-options" id="filter-type">
+                    <label class="filter-option">
+                        <input type="checkbox" value="CLT">
+                        <span>CLT</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="PJ">
+                        <span>PJ</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Estágio">
+                        <span>Estágio</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Freelance">
+                        <span>Freelance</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Temporário">
+                        <span>Temporário</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Filtro: Nível -->
+            <div class="filter-group">
+                <h4>Nível de Experiência</h4>
+                <div class="filter-options" id="filter-level">
+                    <label class="filter-option">
+                        <input type="checkbox" value="Júnior">
+                        <span>Júnior</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Pleno">
+                        <span>Pleno</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Sênior">
+                        <span>Sênior</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Especialista">
+                        <span>Especialista</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Sem experiência">
+                        <span>Sem experiência</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Filtro: Faixa Salarial -->
+            <div class="filter-group">
+                <h4>Faixa Salarial</h4>
+                <div class="filter-options" id="filter-salary">
+                    <label class="filter-option">
+                        <input type="checkbox" value="0-2000">
+                        <span>Até R$ 2.000</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="2000-4000">
+                        <span>R$ 2.000 - R$ 4.000</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="4000-7000">
+                        <span>R$ 4.000 - R$ 7.000</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="7000-12000">
+                        <span>R$ 7.000 - R$ 12.000</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="12000+">
+                        <span>Acima de R$ 12.000</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Filtro: Match -->
+            <div class="filter-group">
+                <h4>Match mínimo</h4>
+                <div class="match-slider">
+                    <input type="range" id="match-slider" min="0" max="100" value="0" step="5">
+                    <div class="match-values">
+                        <span>0%</span>
+                        <span id="match-value">50%</span>
+                        <span>100%</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- RESULTADOS -->
+        <main class="results-area">
+            <div class="results-header">
+                <div class="results-info">
+                    <h2 id="results-count">0 vagas encontradas</h2>
+                    <p id="results-subtitle">Ajuste os filtros para refinar sua busca</p>
+                </div>
+                <div class="sort-control">
+                    <label for="sort-select">Ordenar por:</label>
+                    <select id="sort-select">
+                        <option value="relevance">Relevância</option>
+                        <option value="match">Maior Match</option>
+                        <option value="salary-desc">Maior salário</option>
+                        <option value="salary-asc">Menor salário</option>
+                        <option value="recent">Mais recentes</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="results-grid" id="results-grid">
+                <!-- Cards serão injetados via JavaScript -->
+            </div>
+
+            <!-- Estado vazio -->
+            <div class="empty-state" id="empty-state" style="display: none;">
+                <svg viewBox="0 0 24 24" fill="#7c5cfc"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <h3>Nenhuma vaga encontrada</h3>
+                <p>Tente ajustar seus filtros ou buscar por outros termos.</p>
+                <button class="btn-clear-filters-large" id="btn-clear-all">Limpar todos os filtros</button>
+            </div>
+        </main>
+    </section>
+
+    <!-- MODAL DE DETALHES DA VAGA -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="vacancy-modal">
+            <button class="modal-close" id="modal-close">
+                <svg viewBox="0 0 24 24" fill="#fff"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+            </button>
+            <div class="modal-content" id="modal-content">
+                <!-- Conteúdo injetado via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>ConectaVagas</h4>
+                <p>Conectando talentos às melhores oportunidades do mercado.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Página Principal</a></li>
+                    <li><a href="historico.html">Histórico</a></li>
+                    <li><a href="avaliaçao.html">Avaliação CV</a></li>
+                    <li><a href="perfil.html">Minha Conta</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="ajuda.html">Central de Ajuda</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ConectaVagas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script-theme.js"></script>
+    <script src="js/script-vagas.js"></script>
+    
+</body>
+</html>

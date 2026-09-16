@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar | ConectaVagas</title>
+    <script src="script-theme.js"></script>
+    <link rel="stylesheet" href="style-cadastro.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nome">ACESSO</div>
+        <div class="logo">ConectaVagas</div>
+        <div class="theme-toggle" aria-label="Alternar tema"></div>
+        <div class="nav-links">
+            <a href="index.html">Início</a>
+            <a href="cadastro.html">Cadastrar-se</a>
+        </div>
+    </nav>
+
+    <main class="page-shell">
+        <section class="form-panel">
+            <p class="eyebrow">Área da conta</p>
+            <h1>Entre no seu perfil.</h1>
+            <p class="form-intro">Use seu e-mail para acessar suas informações e acompanhar suas oportunidades.</p>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">E-mail</label>
+                    <input id="login-email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="form-group" style="margin-top: 20px;">
+                    <label for="login-password">Senha</label>
+                    <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+                </div>
+                <div class="form-actions">
+                    <a class="secondary-action" href="index.html">Voltar</a>
+                    <button class="primary-action" type="submit">Entrar</button>
+                </div>
+                <p class="status-message" aria-live="polite"></p>
+            </form>
+            <p class="account-switch">Ainda não tem cadastro? <a href="cadastro.html">Crie seu perfil pessoal</a>.</p>
+        </section>
+    </main>
+
+    <script src="js/script-login.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de empresa | ConectaVagas</title>
+    <script src="script-theme.js"></script>
+    <link rel="stylesheet" href="style-cadastro.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nome">PARCERIAS</div>
+        <div class="logo">ConectaVagas</div>
+        <div class="theme-toggle" aria-label="Alternar tema"></div>
+        <div class="nav-links">
+            <a href="index-gerente.html">Início</a>
+            <a href="cadastro.html">Cadastro pessoal</a>
+        </div>
+    </nav>
+
+    <main class="page-shell">
+        <section class="form-panel">
+            <p class="eyebrow">Cadastro empresarial</p>
+            <h1>Apresente sua empresa.</h1>
+            <p class="form-intro">Crie um perfil para publicar oportunidades e encontrar pessoas alinhadas à cultura e às necessidades do seu negócio.</p>
+
+            <form id="company-registration">
+                <div class="form-grid">
+                    <div class="form-group full">
+                        <label for="razao-social">Razão social *</label>
+                        <input id="razao-social" name="razaoSocial" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nome-fantasia">Nome fantasia *</label>
+                        <input id="nome-fantasia" name="nomeFantasia" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cnpj">CNPJ *</label>
+                        <input id="cnpj" name="cnpj" type="text" inputmode="numeric" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-empresa">E-mail corporativo *</label>
+                        <input id="email-empresa" name="emailEmpresa" type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefone-empresa">Telefone *</label>
+                        <input id="telefone-empresa" name="telefoneEmpresa" type="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="segmento">Segmento *</label>
+                        <input id="segmento" name="segmento" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="porte">Porte da empresa *</label>
+                        <select id="porte" name="porte" required>
+                            <option value="">Selecione</option>
+                            <option>Microempresa</option>
+                            <option>Pequena empresa</option>
+                            <option>Média empresa</option>
+                            <option>Grande empresa</option>
+                        </select>
+                    </div>
+                    <div class="form-group full">
+                        <label for="endereco">Cidade e estado *</label>
+                        <input id="endereco" name="endereco" type="text" required>
+                    </div>
+                    <div class="form-group full">
+                        <label for="descricao">Sobre a empresa</label>
+                        <textarea id="descricao" name="descricao" rows="4" placeholder="Conte brevemente sobre a cultura e os tipos de oportunidade."></textarea>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <a class="secondary-action" href="index.html">Voltar</a>
+                    <button class="primary-action" type="submit">Criar perfil empresarial</button>
+                </div>
+                <p class="status-message" aria-live="polite"></p>
+            </form>
+
+            <p class="account-switch">Está procurando uma oportunidade? <a href="cadastro.html">Faça seu cadastro pessoal</a>.</p>
+        </section>
+    </main>
+
+    <script src="js/script-cadastro.js"></script>
+</body>
+</html>
